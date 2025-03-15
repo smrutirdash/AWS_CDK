@@ -1,1 +1,1 @@
-Repository to learn AWS CDK
+Repository to learn AWS CDK constructors
