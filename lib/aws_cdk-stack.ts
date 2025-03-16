@@ -15,7 +15,8 @@ export class AwsCdkStack extends cdk.Stack {
     const s3demobucket = new s3.Bucket(this,'s3demobucket',{
       bucketName:'demos3bucket20250315',
       versioned: false,
-      publicReadAccess: false
+      publicReadAccess: false,
+      removalPolicy:cdk.RemovalPolicy.DESTROY
     })
   }
 }
