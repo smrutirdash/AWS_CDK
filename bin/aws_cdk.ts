@@ -3,10 +3,12 @@ import * as cdk from 'aws-cdk-lib';
 import { AwsCdkStack } from '../lib/aws_cdk-stack';
 import { DynamodbStack } from '../lib/dynamodb-stack';
 import { LambdaStack } from '../lib/lambda-stack';
+import { Apigwlambdas3Stack } from '../lib/apigw-lambda-s3-stack'
 const app = new cdk.App();
-new AwsCdkStack(app, 'AwsCdkStack', {});
-new DynamodbStack(app, 'DynamodbStack', {});
-new LambdaStack(app, 'LambdaStack', {});
+//new AwsCdkStack(app, 'AwsCdkStack', {});
+//new DynamodbStack(app, 'DynamodbStack', {});
+//new LambdaStack(app, 'LambdaStack', {});
+new Apigwlambdas3Stack(app, 'Apigwlambdas3Stack', {});
 //below line too is same only here we are specifying that the stack will run in default account and region of aws configure
 //new LambdaStack(app, 'LambdaStack', {env: { account: process.env.CDK_DEFAULT_ACCOUNT, region: process.env.CDK_DEFAULT_REGION}});
 //below line too is same only here we are specifying that the stack will run in mentioned account and region
